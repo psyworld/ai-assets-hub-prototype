@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-surface: #fafafa;
+  --color-border: #e8e8ec;
+  --color-muted: #6b7280;
+  --color-accent: #3b3f5c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 7rem;
+}
+
+body {
+  @apply bg-[var(--color-surface)] text-zinc-900 antialiased font-sans text-[15px] leading-relaxed;
+}
+
+/* Markdown-ish prose in doc pages */
+.prose-hub h2 {
+  @apply mt-10 mb-3 text-lg font-semibold tracking-tight text-zinc-900;
+}
+.prose-hub h3 {
+  @apply mt-8 mb-2 text-base font-semibold text-zinc-900;
+}
+.prose-hub p {
+  @apply my-3 text-zinc-600;
+}
+.prose-hub ul {
+  @apply my-3 list-disc pl-5 text-zinc-600;
+}
+.prose-hub li {
+  @apply my-1;
+}
+.prose-hub code {
+  @apply rounded bg-zinc-100 px-1 py-0.5 font-mono text-[13px] text-zinc-800;
+}
